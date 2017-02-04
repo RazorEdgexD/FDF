@@ -12,9 +12,12 @@
 
 #ifndef FDF_H
 # define FDF_H
-# define rad (180 / PI)
-# define is_digit(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
-// # define STRING (s[i] == 'A' || s[i] == 'B' || s[i] == 'C' ||s[i] == 'D' || s[i] == 'E' || s[i] == 'F' || s[i] == 'x' || s[i] == 'a' || s[i] == 'b' || s[i] == 'c' || s[i] == 'd' || s[i] == 'e' || s[i] == 'f' || s[i] == '0') || Is_Digit(s[i])
+# define WIN_X 1200
+# define WIN_Y 1000
+# define RAD (2 * M_PI / 360)
+# define L (45 * RAD)
+# define B (45 * RAD)
+# define IS_DIGIT(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
 
 # include "../libft/libft.h"
 # include <unistd.h>
@@ -24,27 +27,43 @@
 # include <math.h>
 # include "mlx.h"
 
+typedef	struct		s_cor
+{
+	double			x;
+	double			y;
+	double			z;
+	int				point;
+	int				red;
+	int				green;
+	int				blue;
+	int				color;
+	struct s_cor	*next;
+}					t_cor;
+
 typedef struct		s_fdf
 {
 	void			*mlx;
 	void			*win;
-	int				win_x;
-	int				win_y;
 	int				center_x;
 	int				center_y;
 	int				len_x;
 	int				len_y;
-	int				scale;
+	int				scalX;
+	int				scalY;
+	int				scalZ;
 	int				i;
 	int				j;
 	int				k;
-
-	int				***arr_i;
-	char			***tmp;
+	struct s_cor	*cor;
+	struct s_cor	*tmp_cor;
+	struct s_cor	*tmp_cor10;
 }					t_fdf;
 
-void				ft_check_and_add_coord(int fd1, int fd2, t_fdf fdf);
+void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);
 int					ft_atoi_base(char *str, int base);
+void				ft_take_color(char *str, t_cor *tmp);
+void				ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf fdf);
+void				ft_draw(t_fdf fdf);
 
 void				ft_arguments_error(void);
 void				ft_open_file_error(void);

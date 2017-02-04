@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-# define BUFF_SIZE 32
+# define BUFF_SIZE 9999
 
 void				ft_putchar(char c);
 void				ft_putchar_fd(char c, int fd);
