@@ -40,6 +40,21 @@ typedef	struct		s_cor
 	struct s_cor	*next;
 }					t_cor;
 
+typedef struct		s_draw
+{
+	int				deltaX;
+	int				deltaY;
+	int				signX;
+	int				signY;
+	int				error;
+	int				error2;
+	double			x1;
+	double			x2;
+	double			y1;
+	double			y2;
+	struct s_draw	*next;
+}					t_draw;
+
 typedef struct		s_fdf
 {
 	void			*mlx;
@@ -54,16 +69,18 @@ typedef struct		s_fdf
 	int				i;
 	int				j;
 	int				k;
+	int				point;
+	struct s_draw	*draw;
 	struct s_cor	*cor;
 	struct s_cor	*tmp_cor;
-	struct s_cor	*tmp_cor10;
 }					t_fdf;
 
 void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);
 int					ft_atoi_base(char *str, int base);
 void				ft_take_color(char *str, t_cor *tmp);
-void				ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf fdf);
-void				ft_draw(t_fdf fdf);
+void				ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf *fdf);
+void				ft_draw(t_fdf *fdf);
+void				drawLine(t_draw *draw, t_fdf *fdf);
 
 void				ft_arguments_error(void);
 void				ft_open_file_error(void);

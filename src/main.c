@@ -30,7 +30,7 @@ int		main(int argc, char **argv)
 		fdf.center_x = WIN_X / 2;
 		fdf.center_y = WIN_Y / 4;
 		ft_check_and_add_coord(fd1, fd2, &fdf);
-		ft_draw(fdf);
+		ft_draw(&fdf);
 		printf("LEN_X=%d | LEN_Y=%d\n", fdf.len_x, fdf.len_y);
 		close(fd1);
 		close(fd2);

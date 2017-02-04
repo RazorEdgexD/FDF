@@ -99,13 +99,12 @@ void		ft_add_coord(int fd2, t_fdf *fdf)
 		tmp[fdf->i] = ft_strsplit(line, 32);
 		while (tmp[fdf->i][fdf->j] != NULL)
 		{
+			fdf->tmp_cor->point = fdf->point++;
 			fdf->tmp_cor->x = fdf->j * fdf->scalX;
-			fdf->tmp_cor->y = fdf->i * fdf->scalY;
+			fdf->tmp_cor->y = fdf->i  * fdf->scalY;
 			fdf->tmp_cor->z = (double)ft_atoi(tmp[fdf->i][fdf->j]) * fdf->scalZ;
 			ft_take_color(tmp[fdf->i][fdf->j], fdf->tmp_cor);
 			fdf->tmp_cor->next = (t_cor*)malloc(sizeof(t_cor));
-			printf("%d========================%d\n", fdf->i, fdf->j);
-			printf("x=%f|y=%f|z=%f\n", fdf->tmp_cor->x, fdf->tmp_cor->y ,fdf->tmp_cor->z);
 			fdf->tmp_cor = fdf->tmp_cor->next;
 			fdf->tmp_cor->next = NULL;
 			fdf->j++;
@@ -113,17 +112,13 @@ void		ft_add_coord(int fd2, t_fdf *fdf)
 		fdf->j = 0;
 		fdf->i++;
 	}
-//	while (fdf->cor->next)
-//	{
-//		printf("x=%d y=%d z=%d color=%d red=%d green=%d blue=%d\n", fdf->cor->x, fdf->cor->y, fdf->cor->z, fdf->cor->color, fdf->cor->red, fdf->cor->green, fdf->cor->blue);
-//		fdf->cor = fdf->cor->next;
-//	}
 }
 
 void		ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf)
 {
 	fdf->j = 0;
 	fdf->i = 0;
+	fdf->point = 0;
 	ft_len_plus_color_check(fd1, fdf);
 	ft_add_scale(fdf);
 	ft_add_coord(fd2, fdf);

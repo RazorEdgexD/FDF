@@ -27,6 +27,7 @@ SRCS = main.c										\
 		ft_check_and_add_coord.c					\
 		ft_color.c									\
 		ft_draw.c									\
+		ft_tools.c									\
 
 BINS = $(SRCS:.c=.o)
 
