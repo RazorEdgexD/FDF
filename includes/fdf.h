@@ -12,11 +12,11 @@
 
 #ifndef FDF_H
 # define FDF_H
-# define WIN_X 1200
-# define WIN_Y 1000
+# define WIN_X 2000
+# define WIN_Y 1600
 # define RAD (2 * M_PI / 360)
-# define L (45 * RAD)
-# define B (45 * RAD)
+# define L (65 * RAD)
+# define B (25 * RAD)
 # define IS_DIGIT(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
 
 # include "../libft/libft.h"
@@ -32,12 +32,10 @@ typedef	struct		s_cor
 	double			x;
 	double			y;
 	double			z;
-	int				point;
 	int				red;
 	int				green;
 	int				blue;
 	int				color;
-	struct s_cor	*next;
 }					t_cor;
 
 typedef struct		s_draw
@@ -48,11 +46,10 @@ typedef struct		s_draw
 	int				signY;
 	int				error;
 	int				error2;
-	double			x1;
-	double			x2;
-	double			y1;
-	double			y2;
-	struct s_draw	*next;
+	int				x1;
+	int				x2;
+	int				y1;
+	int				y2;
 }					t_draw;
 
 typedef struct		s_fdf
@@ -70,9 +67,7 @@ typedef struct		s_fdf
 	int				j;
 	int				k;
 	int				point;
-	struct s_draw	*draw;
-	struct s_cor	*cor;
-	struct s_cor	*tmp_cor;
+	struct s_cor	***cor;
 }					t_fdf;
 
 void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);

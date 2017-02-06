@@ -78,12 +78,11 @@ void		ft_add_scale(t_fdf *fdf)
 	fdf->scalX = WIN_X / 2 / fdf->len_x;
 	fdf->scalY = WIN_Y / 2 / fdf->len_y;
 	if (fdf->len_x == 500)
-		fdf->scalX = 1;
+		fdf->scalX = 2;
 	if (fdf->len_y == 500)
-		fdf->scalY = 1;
-	fdf->scalZ = (fdf->scalX + fdf->scalY) / 4;
-	if (fdf->scalY == 1 && fdf->scalX ==1)
-		fdf->scalZ = 1;
+		fdf->scalY = 2;
+	fdf->scalZ = (fdf->scalX + fdf->scalY) / fdf->scalY * 4;
+
 }
 
 void		ft_add_coord(int fd2, t_fdf *fdf)
@@ -91,27 +90,26 @@ void		ft_add_coord(int fd2, t_fdf *fdf)
 	char	*line;
 	char	***tmp;
 
+	fdf->cor = (t_cor***)malloc(sizeof(t_cor**) * (fdf->len_y + 1));
 	tmp = (char***)malloc(sizeof(char**) * (fdf->len_y + 1));
-	fdf->tmp_cor = (t_cor*)malloc(sizeof(t_cor));
-	fdf->cor = fdf->tmp_cor;
 	while (get_next_line(fd2, &line) == 1)
 	{
+		fdf->cor[fdf->i] = (t_cor**)malloc(sizeof(t_cor*) * (fdf->len_x + 1));
 		tmp[fdf->i] = ft_strsplit(line, 32);
 		while (tmp[fdf->i][fdf->j] != NULL)
 		{
-			fdf->tmp_cor->point = fdf->point++;
-			fdf->tmp_cor->x = fdf->j * fdf->scalX;
-			fdf->tmp_cor->y = fdf->i  * fdf->scalY;
-			fdf->tmp_cor->z = (double)ft_atoi(tmp[fdf->i][fdf->j]) * fdf->scalZ;
-			ft_take_color(tmp[fdf->i][fdf->j], fdf->tmp_cor);
-			fdf->tmp_cor->next = (t_cor*)malloc(sizeof(t_cor));
-			fdf->tmp_cor = fdf->tmp_cor->next;
-			fdf->tmp_cor->next = NULL;
+			fdf->cor[fdf->i][fdf->j] = (t_cor*)malloc(sizeof(t_cor));
+			fdf->cor[fdf->i][fdf->j]->x = fdf->j * fdf->scalX;
+			fdf->cor[fdf->i][fdf->j]->y = fdf->i  * fdf->scalY;
+			fdf->cor[fdf->i][fdf->j]->z = (double)ft_atoi(tmp[fdf->i][fdf->j]) * fdf->scalZ;
+			ft_take_color(tmp[fdf->i][fdf->j], fdf->cor[fdf->i][fdf->j]);
 			fdf->j++;
 		}
 		fdf->j = 0;
 		fdf->i++;
 	}
+	fdf->i = 0;
+	fdf->j = 0;
 }
 
 void		ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf)

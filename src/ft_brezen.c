@@ -19,7 +19,7 @@ void	ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf *fdf)
 	int	sx;
 	int	sy;
 
-//	printf("%d|%d   =   %d|%d\n", x0, y0, x1, y1);
+	printf("%d|%d   =   %d|%d\n", x0, y0, x1, y1);
 	dx = abs(x1 - x0);
 	dy = abs(y1 - y0);
 	sx = x1 >= x0 ? 1 : -1;
@@ -62,7 +62,7 @@ void	ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf *fdf)
  	}
 }
 
-void drawLine(t_draw *draw, t_fdf *fdf)
+/*void drawLine(t_draw *draw, t_fdf *fdf)
 {
 //    const int draw-deltaX = abs(x2 - x1);
 //    const int deltaY = abs(y2 - y1);
@@ -71,10 +71,11 @@ void drawLine(t_draw *draw, t_fdf *fdf)
 //    int error = deltaX - deltaY;
 //	const int error2 = error * 2;
 
-    mlx_pixel_put(fdf->mlx, fdf->win, draw->x2, draw->y2, fdf->cor->color);
+    //mlx_pixel_put(fdf->mlx, fdf->win, draw->x2, draw->y2, fdf->cor->color);
+    printf("%d|%d   =   %d|%d\n", draw->x1, draw->x2, draw->y1, draw->y2);
     while(draw->x1 != draw->x2 || draw->y1 != draw->y2)
    {
-        mlx_pixel_put(fdf->mlx, fdf->win, draw->x2, draw->y2, fdf->cor->color);
+    //    mlx_pixel_put(fdf->mlx, fdf->win, draw->x2, draw->y2, fdf->cor->color);
         if(draw->error2 > -draw->deltaY)
         {
             draw->error -= draw->deltaY;
@@ -87,3 +88,4 @@ void drawLine(t_draw *draw, t_fdf *fdf)
         }
     }
 }
+*/
