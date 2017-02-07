@@ -69,20 +69,18 @@ void		ft_len_plus_color_check(int fd, t_fdf *fdf)
 		fdf->len_x = len_x;
 		len_x = 0;
 		fdf->len_y++;
-
 	}
 }
 
 void		ft_add_scale(t_fdf *fdf)
 {
-	fdf->scalX = WIN_X / 2 / fdf->len_x;
-	fdf->scalY = WIN_Y / 2 / fdf->len_y;
+	fdf->scalx = WIN_X / 2 / fdf->len_x;
+	fdf->scaly = WIN_Y / 2 / fdf->len_y;
 	if (fdf->len_x == 500)
-		fdf->scalX = 2;
+		fdf->scalx = 2;
 	if (fdf->len_y == 500)
-		fdf->scalY = 2;
-	fdf->scalZ = (fdf->scalX + fdf->scalY) / fdf->scalY * 4;
-
+		fdf->scaly = 2;
+	fdf->scalz = (fdf->scalx + fdf->scaly) / fdf->scaly * 5;
 }
 
 void		ft_add_coord(int fd2, t_fdf *fdf)
@@ -99,9 +97,10 @@ void		ft_add_coord(int fd2, t_fdf *fdf)
 		while (tmp[fdf->i][fdf->j] != NULL)
 		{
 			fdf->cor[fdf->i][fdf->j] = (t_cor*)malloc(sizeof(t_cor));
-			fdf->cor[fdf->i][fdf->j]->x = fdf->j * fdf->scalX;
-			fdf->cor[fdf->i][fdf->j]->y = fdf->i  * fdf->scalY;
-			fdf->cor[fdf->i][fdf->j]->z = (double)ft_atoi(tmp[fdf->i][fdf->j]) * fdf->scalZ;
+			fdf->cor[fdf->i][fdf->j]->x = fdf->j * fdf->scalx;
+			fdf->cor[fdf->i][fdf->j]->y = fdf->i * fdf->scaly;
+			fdf->cor[fdf->i][fdf->j]->z = -(double)ft_atoi(tmp[fdf->i][fdf->j])
+			* fdf->scalz;
 			ft_take_color(tmp[fdf->i][fdf->j], fdf->cor[fdf->i][fdf->j]);
 			fdf->j++;
 		}
@@ -116,8 +115,12 @@ void		ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf)
 {
 	fdf->j = 0;
 	fdf->i = 0;
-	fdf->point = 0;
+	fdf->l = 60 * RAD;
+	fdf->b = -70.5 * RAD;
+	fdf->y = 45 * RAD;
 	ft_len_plus_color_check(fd1, fdf);
 	ft_add_scale(fdf);
 	ft_add_coord(fd2, fdf);
+	fdf->center_x = (fdf->scalx * fdf->len_x) / 2;
+	fdf->center_y = (fdf->scaly * fdf->len_y) / 4;
 }

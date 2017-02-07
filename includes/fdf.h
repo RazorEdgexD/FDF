@@ -12,11 +12,9 @@
 
 #ifndef FDF_H
 # define FDF_H
-# define WIN_X 2000
-# define WIN_Y 1600
+# define WIN_X 1600
+# define WIN_Y 1200
 # define RAD (2 * M_PI / 360)
-# define L (65 * RAD)
-# define B (25 * RAD)
 # define IS_DIGIT(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
 
 # include "../libft/libft.h"
@@ -40,16 +38,16 @@ typedef	struct		s_cor
 
 typedef struct		s_draw
 {
-	int				deltaX;
-	int				deltaY;
-	int				signX;
-	int				signY;
+	int				deltax;
+	int				deltay;
+	int				signx;
+	int				signy;
 	int				error;
 	int				error2;
+	int				x0;
+	int				y0;
 	int				x1;
-	int				x2;
 	int				y1;
-	int				y2;
 }					t_draw;
 
 typedef struct		s_fdf
@@ -60,22 +58,25 @@ typedef struct		s_fdf
 	int				center_y;
 	int				len_x;
 	int				len_y;
-	int				scalX;
-	int				scalY;
-	int				scalZ;
+	int				scalx;
+	int				scaly;
+	int				scalz;
 	int				i;
 	int				j;
 	int				k;
-	int				point;
+	int				l;
+	int				b;
+	int				y;
 	struct s_cor	***cor;
+	struct s_draw	xy0;
+	struct s_draw	xy1;
 }					t_fdf;
 
 void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);
 int					ft_atoi_base(char *str, int base);
 void				ft_take_color(char *str, t_cor *tmp);
-void				ft_brezen(int x0, int y0, int x1, int y1, int color, t_fdf *fdf);
+void				ft_brezen(t_fdf *fdf, t_draw *draw, int i, int j);
 void				ft_draw(t_fdf *fdf);
-void				drawLine(t_draw *draw, t_fdf *fdf);
 
 void				ft_arguments_error(void);
 void				ft_open_file_error(void);

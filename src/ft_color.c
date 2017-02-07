@@ -19,12 +19,10 @@ void	ft_take_color(char *str, t_cor *cord)
 	if ((tmp = ft_strchr(str, 'x')))
 	{
 		tmp++;
-	//	printf("tmp=%s  atoi_base=%d\n", tmp, ft_atoi_base(tmp, 16));
 		cord->color = ft_atoi_base(tmp, 16);
 		cord->red = (cord->color >> 16);
 		cord->green = (cord->color >> 8) - (cord->red << 8);
 		cord->blue = (cord->color) - (cord->red << 16) - (cord->green << 8);
-	//	printf("r = %i g = %i b = %i\n", cord->red, cord->green, cord->blue);
 	}
 	else
 	{

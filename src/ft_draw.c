@@ -12,32 +12,71 @@
 
 #include "fdf.h"
 
+int		ft_count_x(t_fdf *fdf, int i, int j)
+{
+	int	x;
 
+	x = (fdf->cor[i][j]->x * cos(fdf->b) + (-fdf->cor[i][j]->y * sin(fdf->l) +
+	fdf->cor[i][j]->z * cos(fdf->l)) * sin(fdf->b)) * cos(fdf->y) +
+	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * sin(fdf->l)) *
+	sin(fdf->y) + (WIN_X / 2);
+	return (x);
+}
+
+int		ft_count_y(t_fdf *fdf, int i, int j)
+{
+	int	y;
+
+	y = -(fdf->cor[i][j]->x * cos(fdf->b) + (-fdf->cor[i][j]->y * sin(fdf->l) +
+	fdf->cor[i][j]->z * cos(fdf->l)) * sin(fdf->b)) * sin(fdf->y) +
+	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * sin(fdf->l)) *
+	cos(fdf->y) + (WIN_Y / 2);
+	return (y);
+}
+
+void	ft_fill_draw(t_fdf *fdf, int i, int j)
+{
+	fdf->xy0.x0 = ft_count_x(fdf, i, j);
+	fdf->xy0.y0 = ft_count_y(fdf, i, j);
+	fdf->xy0.x1 = ft_count_x(fdf, i, j + 1);
+	fdf->xy0.y1 = ft_count_y(fdf, i, j + 1);
+	fdf->xy0.deltax = abs(fdf->xy0.x1 - fdf->xy0.x0);
+	fdf->xy0.deltay = abs(fdf->xy0.y1 - fdf->xy0.y0);
+	fdf->xy0.signx = fdf->xy0.x1 >= fdf->xy0.x0 ? 1 : -1;
+	fdf->xy0.signy = fdf->xy0.y1 >= fdf->xy0.y0 ? 1 : -1;
+	fdf->xy0.error = fdf->xy0.deltax - fdf->xy0.deltay;
+	fdf->xy0.error2 = fdf->xy0.error * 2;
+}
+
+void	ft_fill_draw_next(t_fdf *fdf, int i, int j)
+{
+	fdf->xy1.x0 = ft_count_x(fdf, i, j);
+	fdf->xy1.y0 = ft_count_y(fdf, i, j);
+	fdf->xy1.x1 = ft_count_x(fdf, i + 1, j);
+	fdf->xy1.y1 = ft_count_y(fdf, i + 1, j);
+	fdf->xy1.deltax = abs(fdf->xy1.x1 - fdf->xy1.x0);
+	fdf->xy1.deltay = abs(fdf->xy1.y1 - fdf->xy1.y0);
+	fdf->xy1.signx = abs(fdf->xy1.x1 - fdf->xy1.x0);
+	fdf->xy1.signy = abs(fdf->xy1.y1 - fdf->xy1.y0);
+	fdf->xy1.error = fdf->xy1.deltax - fdf->xy1.deltay;
+	fdf->xy1.error2 = fdf->xy1.error * 2;
+}
 
 void	ft_draw(t_fdf *fdf)
 {
-	double	xx = 0;
-	double	yy = 0;
-	double 	x_n = 0;
-	double	y_n = 0;
-
 	while (fdf->i != fdf->len_y)
 	{
 		while (fdf->j != fdf->len_x)
 		{
-			xx = (fdf->cor[fdf->i][fdf->j]->x) * cos(L) + (-(fdf->cor[fdf->i][fdf->j]->y) * sin(L) + -fdf->cor[fdf->i][fdf->j]->z * cos(B)) * sin(B) + (WIN_X / 2);
-			yy = ((fdf->cor[fdf->i][fdf->j]->y) * cos(B)) + -fdf->cor[fdf->i][fdf->j]->z * sin(B) + (WIN_Y / 2);
 			if (fdf->j + 1 != fdf->len_x)
 			{
-				x_n = (fdf->cor[fdf->i][fdf->j + 1]->x) * cos(L) + (-(fdf->cor[fdf->i][fdf->j + 1]->y) * sin(L) + -fdf->cor[fdf->i][fdf->j + 1]->z * cos(B)) * sin(B) + (WIN_X / 2);
-				y_n = ((fdf->cor[fdf->i][fdf->j + 1]->y) * cos(B)) + -fdf->cor[fdf->i][fdf->j + 1]->z * sin(B) + (WIN_Y / 2);
-				ft_brezen(xx, yy, x_n, y_n , fdf->cor[fdf->i][fdf->j]->color, fdf);
+				ft_fill_draw(fdf, fdf->i, fdf->j);
+				ft_brezen(fdf, &fdf->xy0, fdf->i, fdf->j + 1);
 			}
 			if (fdf->i + 1 != fdf->len_y)
 			{
-				x_n = (fdf->cor[fdf->i + 1][fdf->j]->x) * cos(L) + (-(fdf->cor[fdf->i + 1][fdf->j]->y) * sin(L) + -fdf->cor[fdf->i + 1][fdf->j]->z * cos(B)) * sin(B) + (WIN_X / 2);
-				y_n = ((fdf->cor[fdf->i + 1][fdf->j]->y) * cos(B)) + -fdf->cor[fdf->i + 1][fdf->j]->z * sin(B) + (WIN_Y / 2);
-				ft_brezen(xx, yy, x_n, y_n , fdf->cor[fdf->i][fdf->j]->color, fdf);
+				ft_fill_draw_next(fdf, fdf->i, fdf->j);
+				ft_brezen(fdf, &fdf->xy1, fdf->i + 1, fdf->j);
 			}
 			fdf->j++;
 		}
