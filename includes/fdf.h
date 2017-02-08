@@ -14,7 +14,7 @@
 # define FDF_H
 # define WIN_X 1600
 # define WIN_Y 1200
-# define RAD (2 * M_PI / 360)
+# define RAD 0.0174533
 # define IS_DIGIT(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
 
 # include "../libft/libft.h"
@@ -54,6 +54,7 @@ typedef struct		s_fdf
 {
 	void			*mlx;
 	void			*win;
+	void			*image;
 	int				center_x;
 	int				center_y;
 	int				len_x;
@@ -61,23 +62,25 @@ typedef struct		s_fdf
 	int				scalx;
 	int				scaly;
 	int				scalz;
+	int				scalall;
 	int				i;
 	int				j;
 	int				k;
-	int				l;
-	int				b;
-	int				y;
+	double			l;
+	double			b;
+	double			y;
 	struct s_cor	***cor;
 	struct s_draw	xy0;
 	struct s_draw	xy1;
 }					t_fdf;
 
+int					ft_loop_hook(t_fdf *fdf);
+void				ft_image_pixel_put(t_fdf *fdf, int x, int j, int rgb);
 void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);
 int					ft_atoi_base(char *str, int base);
 void				ft_take_color(char *str, t_cor *tmp);
 void				ft_brezen(t_fdf *fdf, t_draw *draw, int i, int j);
 void				ft_draw(t_fdf *fdf);
-
 void				ft_arguments_error(void);
 void				ft_open_file_error(void);
 void				ft_malloc_error(void);

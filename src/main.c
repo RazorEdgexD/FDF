@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "fdf.h"
+#include <stdio.h>
 
 int		main(int argc, char **argv)
 {
@@ -26,11 +27,12 @@ int		main(int argc, char **argv)
 			ft_open_file_error();
 		fdf.mlx = mlx_init();
 		fdf.win = mlx_new_window(fdf.mlx, WIN_X, WIN_Y, "FDF by Razor");
+//		fdf.image = mlx_new_image(fdf.mlx, WIN_X, WIN_Y);
 		fdf.center_x = WIN_X / 2;
 		fdf.center_y = WIN_Y / 2;
 		ft_check_and_add_coord(fd1, fd2, &fdf);
-		ft_draw(&fdf);
-		printf("LEN_X=%d | LEN_Y=%d\n", fdf.len_x, fdf.len_y);
+	//	ft_draw(&fdf);
+		ft_loop_hook(&fdf);
 		close(fd1);
 		close(fd2);
 		mlx_loop(fdf.mlx);

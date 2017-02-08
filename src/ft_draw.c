@@ -17,9 +17,9 @@ int		ft_count_x(t_fdf *fdf, int i, int j)
 	int	x;
 
 	x = (fdf->cor[i][j]->x * cos(fdf->b) + (-fdf->cor[i][j]->y * sin(fdf->l) +
-	fdf->cor[i][j]->z * cos(fdf->l)) * sin(fdf->b)) * cos(fdf->y) +
-	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * sin(fdf->l)) *
-	sin(fdf->y) + (WIN_X / 2);
+	fdf->cor[i][j]->z * fdf->scalz * cos(fdf->l)) * sin(fdf->b)) * cos(fdf->y) +
+	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * fdf->scalz *
+	sin(fdf->l)) * sin(fdf->y) + (WIN_X / 2);
 	return (x);
 }
 
@@ -28,9 +28,9 @@ int		ft_count_y(t_fdf *fdf, int i, int j)
 	int	y;
 
 	y = -(fdf->cor[i][j]->x * cos(fdf->b) + (-fdf->cor[i][j]->y * sin(fdf->l) +
-	fdf->cor[i][j]->z * cos(fdf->l)) * sin(fdf->b)) * sin(fdf->y) +
-	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * sin(fdf->l)) *
-	cos(fdf->y) + (WIN_Y / 2);
+	fdf->cor[i][j]->z * fdf->scalz * cos(fdf->l)) * sin(fdf->b)) * sin(fdf->y) +
+	(fdf->cor[i][j]->y * cos(fdf->l) + fdf->cor[i][j]->z * fdf->scalz
+	* sin(fdf->l)) * cos(fdf->y) + (WIN_Y / 2);
 	return (y);
 }
 

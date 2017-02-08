@@ -25,10 +25,14 @@ CMakeFiles/fdf_github.dir/src/ft_error.c.o
  ../includes/fdf.h
  ../libft/libft.h
  /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_error.c
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o
  ../includes/fdf.h
  ../libft/libft.h
- /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c
+ /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o
+ ../includes/fdf.h
+ ../libft/libft.h
+ /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c
 CMakeFiles/fdf_github.dir/src/main.c.o
  ../includes/fdf.h
  ../libft/libft.h

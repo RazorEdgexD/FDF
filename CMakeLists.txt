@@ -7,11 +7,12 @@ set(SOURCE_FILES
         src/ft_error.c
         src/ft_brezen.c
         src/main.c
-        src/ft_tools.c
         src/ft_draw.c
         src/ft_check_and_add_coord.c
         src/ft_color.c
-        src/ft_atoi_base.c)
+        src/ft_atoi_base.c
+		src/ft_image_pixel_put.c
+		src/ft_loop_hook.c)
 
 set(SRC_LIB
         libft/ft_strstr.c

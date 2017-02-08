@@ -54,11 +54,17 @@ fdf.h
 fdf.h
 /nfs/2016/a/aosobliv/Projects/fdf_github/src/fdf.h
 
-/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c
+/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c
+fdf.h
+/nfs/2016/a/aosobliv/Projects/fdf_github/src/fdf.h
+
+/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c
 fdf.h
 /nfs/2016/a/aosobliv/Projects/fdf_github/src/fdf.h
 
 /nfs/2016/a/aosobliv/Projects/fdf_github/src/main.c
 fdf.h
 /nfs/2016/a/aosobliv/Projects/fdf_github/src/fdf.h
+stdio.h
+-
 

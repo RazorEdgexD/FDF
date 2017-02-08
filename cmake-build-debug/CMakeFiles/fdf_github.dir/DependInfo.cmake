@@ -10,7 +10,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_color.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_color.c.o"
   "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_draw.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_draw.c.o"
   "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_error.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_error.c.o"
-  "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_tools.c.o"
+  "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o"
+  "/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o"
   "/nfs/2016/a/aosobliv/Projects/fdf_github/src/main.c" "/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles/fdf_github.dir/src/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

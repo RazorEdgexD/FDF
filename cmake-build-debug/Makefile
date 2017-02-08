@@ -1891,32 +1891,59 @@ src/ft_error.c.s:
 	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_error.c.s
 .PHONY : src/ft_error.c.s
 
-src/ft_tools.o: src/ft_tools.c.o
+src/ft_image_pixel_put.o: src/ft_image_pixel_put.c.o
 
-.PHONY : src/ft_tools.o
+.PHONY : src/ft_image_pixel_put.o
 
 # target to build an object file
-src/ft_tools.c.o:
-	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_tools.c.o
-.PHONY : src/ft_tools.c.o
+src/ft_image_pixel_put.c.o:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o
+.PHONY : src/ft_image_pixel_put.c.o
 
-src/ft_tools.i: src/ft_tools.c.i
+src/ft_image_pixel_put.i: src/ft_image_pixel_put.c.i
 
-.PHONY : src/ft_tools.i
+.PHONY : src/ft_image_pixel_put.i
 
 # target to preprocess a source file
-src/ft_tools.c.i:
-	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_tools.c.i
-.PHONY : src/ft_tools.c.i
+src/ft_image_pixel_put.c.i:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.i
+.PHONY : src/ft_image_pixel_put.c.i
 
-src/ft_tools.s: src/ft_tools.c.s
+src/ft_image_pixel_put.s: src/ft_image_pixel_put.c.s
 
-.PHONY : src/ft_tools.s
+.PHONY : src/ft_image_pixel_put.s
 
 # target to generate assembly for a file
-src/ft_tools.c.s:
-	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_tools.c.s
-.PHONY : src/ft_tools.c.s
+src/ft_image_pixel_put.c.s:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.s
+.PHONY : src/ft_image_pixel_put.c.s
+
+src/ft_loop_hook.o: src/ft_loop_hook.c.o
+
+.PHONY : src/ft_loop_hook.o
+
+# target to build an object file
+src/ft_loop_hook.c.o:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o
+.PHONY : src/ft_loop_hook.c.o
+
+src/ft_loop_hook.i: src/ft_loop_hook.c.i
+
+.PHONY : src/ft_loop_hook.i
+
+# target to preprocess a source file
+src/ft_loop_hook.c.i:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.i
+.PHONY : src/ft_loop_hook.c.i
+
+src/ft_loop_hook.s: src/ft_loop_hook.c.s
+
+.PHONY : src/ft_loop_hook.s
+
+# target to generate assembly for a file
+src/ft_loop_hook.c.s:
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.s
+.PHONY : src/ft_loop_hook.c.s
 
 src/main.o: src/main.c.o
 
@@ -2150,9 +2177,12 @@ help:
 	@echo "... src/ft_error.o"
 	@echo "... src/ft_error.i"
 	@echo "... src/ft_error.s"
-	@echo "... src/ft_tools.o"
-	@echo "... src/ft_tools.i"
-	@echo "... src/ft_tools.s"
+	@echo "... src/ft_image_pixel_put.o"
+	@echo "... src/ft_image_pixel_put.i"
+	@echo "... src/ft_image_pixel_put.s"
+	@echo "... src/ft_loop_hook.o"
+	@echo "... src/ft_loop_hook.i"
+	@echo "... src/ft_loop_hook.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

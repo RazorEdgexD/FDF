@@ -329,7 +329,10 @@
 		<Unit filename="/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_error.c">
 			<Option target="fdf_github"/>
 		</Unit>
-		<Unit filename="/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c">
+		<Unit filename="/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c">
+			<Option target="fdf_github"/>
+		</Unit>
+		<Unit filename="/nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c">
 			<Option target="fdf_github"/>
 		</Unit>
 		<Unit filename="/nfs/2016/a/aosobliv/Projects/fdf_github/src/main.c">

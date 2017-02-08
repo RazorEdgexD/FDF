@@ -25,9 +25,13 @@ CMakeFiles/fdf_github.dir/src/ft_error.c.o: ../includes/fdf.h
 CMakeFiles/fdf_github.dir/src/ft_error.c.o: ../libft/libft.h
 CMakeFiles/fdf_github.dir/src/ft_error.c.o: ../src/ft_error.c
 
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o: ../includes/fdf.h
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o: ../libft/libft.h
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o: ../src/ft_tools.c
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o: ../includes/fdf.h
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o: ../libft/libft.h
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o: ../src/ft_image_pixel_put.c
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o: ../includes/fdf.h
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o: ../libft/libft.h
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o: ../src/ft_loop_hook.c
 
 CMakeFiles/fdf_github.dir/src/main.c.o: ../includes/fdf.h
 CMakeFiles/fdf_github.dir/src/main.c.o: ../libft/libft.h

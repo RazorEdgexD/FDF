@@ -129,33 +129,9 @@ CMakeFiles/fdf_github.dir/src/main.c.o.provides: CMakeFiles/fdf_github.dir/src/m
 CMakeFiles/fdf_github.dir/src/main.c.o.provides.build: CMakeFiles/fdf_github.dir/src/main.c.o
 
 
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o: CMakeFiles/fdf_github.dir/flags.make
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o: ../src/ft_tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf_github.dir/src/ft_tools.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_tools.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c
-
-CMakeFiles/fdf_github.dir/src/ft_tools.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf_github.dir/src/ft_tools.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c > CMakeFiles/fdf_github.dir/src/ft_tools.c.i
-
-CMakeFiles/fdf_github.dir/src/ft_tools.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf_github.dir/src/ft_tools.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_tools.c -o CMakeFiles/fdf_github.dir/src/ft_tools.c.s
-
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o.requires:
-
-.PHONY : CMakeFiles/fdf_github.dir/src/ft_tools.c.o.requires
-
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o.provides: CMakeFiles/fdf_github.dir/src/ft_tools.c.o.requires
-	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_tools.c.o.provides.build
-.PHONY : CMakeFiles/fdf_github.dir/src/ft_tools.c.o.provides
-
-CMakeFiles/fdf_github.dir/src/ft_tools.c.o.provides.build: CMakeFiles/fdf_github.dir/src/ft_tools.c.o
-
-
 CMakeFiles/fdf_github.dir/src/ft_draw.c.o: CMakeFiles/fdf_github.dir/flags.make
 CMakeFiles/fdf_github.dir/src/ft_draw.c.o: ../src/ft_draw.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fdf_github.dir/src/ft_draw.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fdf_github.dir/src/ft_draw.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_draw.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_draw.c
 
 CMakeFiles/fdf_github.dir/src/ft_draw.c.i: cmake_force
@@ -179,7 +155,7 @@ CMakeFiles/fdf_github.dir/src/ft_draw.c.o.provides.build: CMakeFiles/fdf_github.
 
 CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o: CMakeFiles/fdf_github.dir/flags.make
 CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o: ../src/ft_check_and_add_coord.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_check_and_add_coord.c
 
 CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.i: cmake_force
@@ -203,7 +179,7 @@ CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o.provides.build: CMakeFi
 
 CMakeFiles/fdf_github.dir/src/ft_color.c.o: CMakeFiles/fdf_github.dir/flags.make
 CMakeFiles/fdf_github.dir/src/ft_color.c.o: ../src/ft_color.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/fdf_github.dir/src/ft_color.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fdf_github.dir/src/ft_color.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_color.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_color.c
 
 CMakeFiles/fdf_github.dir/src/ft_color.c.i: cmake_force
@@ -227,7 +203,7 @@ CMakeFiles/fdf_github.dir/src/ft_color.c.o.provides.build: CMakeFiles/fdf_github
 
 CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o: CMakeFiles/fdf_github.dir/flags.make
 CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o: ../src/ft_atoi_base.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_atoi_base.c
 
 CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.i: cmake_force
@@ -249,16 +225,65 @@ CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o.provides: CMakeFiles/fdf_github.d
 CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o.provides.build: CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o
 
 
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o: CMakeFiles/fdf_github.dir/flags.make
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o: ../src/ft_image_pixel_put.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c
+
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c > CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.i
+
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_image_pixel_put.c -o CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.s
+
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.requires:
+
+.PHONY : CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.requires
+
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.provides: CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.provides.build
+.PHONY : CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.provides
+
+CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.provides.build: CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o
+
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o: CMakeFiles/fdf_github.dir/flags.make
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o: ../src/ft_loop_hook.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o   -c /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c > CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.i
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/a/aosobliv/Projects/fdf_github/src/ft_loop_hook.c -o CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.s
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.requires:
+
+.PHONY : CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.requires
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.provides: CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.requires
+	$(MAKE) -f CMakeFiles/fdf_github.dir/build.make CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.provides.build
+.PHONY : CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.provides
+
+CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.provides.build: CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o
+
+
 # Object files for target fdf_github
 fdf_github_OBJECTS = \
 "CMakeFiles/fdf_github.dir/src/ft_error.c.o" \
 "CMakeFiles/fdf_github.dir/src/ft_brezen.c.o" \
 "CMakeFiles/fdf_github.dir/src/main.c.o" \
-"CMakeFiles/fdf_github.dir/src/ft_tools.c.o" \
 "CMakeFiles/fdf_github.dir/src/ft_draw.c.o" \
 "CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o" \
 "CMakeFiles/fdf_github.dir/src/ft_color.c.o" \
-"CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o"
+"CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o" \
+"CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o" \
+"CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o"
 
 # External object files for target fdf_github
 fdf_github_EXTERNAL_OBJECTS =
@@ -266,15 +291,16 @@ fdf_github_EXTERNAL_OBJECTS =
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_error.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_brezen.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/main.c.o
-fdf_github: CMakeFiles/fdf_github.dir/src/ft_tools.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_draw.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_color.c.o
 fdf_github: CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o
+fdf_github: CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o
+fdf_github: CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o
 fdf_github: CMakeFiles/fdf_github.dir/build.make
 fdf_github: libft.a
 fdf_github: CMakeFiles/fdf_github.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable fdf_github"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/a/aosobliv/Projects/fdf_github/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable fdf_github"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fdf_github.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -285,11 +311,12 @@ CMakeFiles/fdf_github.dir/build: fdf_github
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_error.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_brezen.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/main.c.o.requires
-CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_tools.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_draw.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_check_and_add_coord.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_color.c.o.requires
 CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_atoi_base.c.o.requires
+CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_image_pixel_put.c.o.requires
+CMakeFiles/fdf_github.dir/requires: CMakeFiles/fdf_github.dir/src/ft_loop_hook.c.o.requires
 
 .PHONY : CMakeFiles/fdf_github.dir/requires
 
