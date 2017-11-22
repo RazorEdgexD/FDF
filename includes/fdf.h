@@ -12,8 +12,8 @@
 
 #ifndef FDF_H
 # define FDF_H
-# define WIN_X 1600
-# define WIN_Y 1200
+# define WIN_X 1400
+# define WIN_Y 1000
 # define RAD 0.0174533
 # define IS_DIGIT(c) ((((c) >= '0') && ((c) <= '9')) ? 1 : 0)
 
@@ -57,23 +57,34 @@ typedef struct		s_fdf
 	void			*image;
 	int				center_x;
 	int				center_y;
+	int				deltax;
+	int				deltay;
 	int				len_x;
 	int				len_y;
 	int				scalx;
 	int				scaly;
-	int				scalz;
-	int				scalall;
+	double			scalz;
+	double			scalall;
+	double			old_scalz;
+	double			old_scalall;
 	int				i;
 	int				j;
 	int				k;
 	double			l;
 	double			b;
 	double			y;
+	int				bonus_color;
+	int				bonus[6];
+	char			*bonus_text[6];
+	int				text_y;
 	struct s_cor	***cor;
 	struct s_draw	xy0;
 	struct s_draw	xy1;
 }					t_fdf;
 
+int					check_color(char c);
+void				add_bonus_color(t_fdf *fdf);
+int					ft_make_color(int r, int g, int b);
 int					ft_loop_hook(t_fdf *fdf);
 void				ft_image_pixel_put(t_fdf *fdf, int x, int j, int rgb);
 void				ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf);
@@ -86,5 +97,7 @@ void				ft_open_file_error(void);
 void				ft_malloc_error(void);
 void				ft_line_len_error(void);
 void				ft_number_error(void);
+void				ft_print_str(t_fdf *fdf, char *str);
+void				ft_print_info(t_fdf *fdf);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: aosobliv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 13:28:10 by aosobliv          #+#    #+#              #
-#    Updated: 2017/02/08 18:17:51 by aosobliv         ###   ########.fr        #
+#    Updated: 2017/02/09 16:21:12 by aosobliv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS = main.c										\
 		ft_draw.c									\
 		ft_image_pixel_put.c						\
 		ft_loop_hook.c								\
+		ft_print_info.c								\
 
 BINS = $(SRCS:.c=.o)
 

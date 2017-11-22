@@ -14,16 +14,18 @@
 
 void	ft_brezen(t_fdf *fdf, t_draw *draw, int i, int j)
 {
+	if (fdf->bonus_color > 0 && fdf->bonus_color < 16777215)
+		fdf->cor[i][j]->color = fdf->bonus_color;
+	if (fdf->k != 5)
+		fdf->cor[i][j]->color = fdf->bonus[fdf->k];
 	draw->signx = draw->x1 >= draw->x0 ? 1 : -1;
 	draw->signy = draw->y1 >= draw->y0 ? 1 : -1;
-//	mlx_pixel_put(fdf->mlx, fdf->win, draw->x1 - fdf->center_x, draw->y1 -
-//		fdf->center_y, fdf->cor[i][j]->color);
-	ft_image_pixel_put(fdf, draw->x1 - fdf->center_x, draw->y1 - fdf->center_y, fdf->cor[i][j]->color);
+	ft_image_pixel_put(fdf, draw->x1 - fdf->center_x, draw->y1 - fdf->center_y,
+		fdf->cor[i][j]->color);
 	while (draw->x0 != draw->x1 || draw->y0 != draw->y1)
 	{
-		ft_image_pixel_put(fdf, draw->x0 - fdf->center_x, draw->y0 - fdf->center_y, fdf->cor[i][j]->color);
-//		mlx_pixel_put(fdf->mlx, fdf->win, draw->x0 - fdf->center_x, draw->y0 -
-//			fdf->center_y, fdf->cor[i][j]->color);
+		ft_image_pixel_put(fdf, draw->x0 - fdf->center_x, draw->y0 -
+			fdf->center_y, fdf->cor[i][j]->color);
 		draw->error2 = draw->error * 2;
 		if (draw->error2 > -draw->deltay)
 		{

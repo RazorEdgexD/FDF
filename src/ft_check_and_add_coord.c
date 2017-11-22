@@ -28,11 +28,7 @@ void		ft_check_number_and_color(char *s)
 				i++;
 				while (s[i] != '\0')
 				{
-					if ((s[i] == 'A' || s[i] == 'B' || s[i] == 'C' ||
-					s[i] == 'D' || s[i] == 'E' || s[i] == 'F' || s[i] == 'x'
-					|| s[i] == 'a' || s[i] == 'b' || s[i] == 'c' || s[i] == 'd'
-					|| s[i] == 'e' || s[i] == 'f' || s[i] == '0')
-					|| IS_DIGIT(s[i]))
+					if (check_color(s[i]))
 						i++;
 					else
 						ft_number_error();
@@ -82,6 +78,12 @@ void		ft_add_scale(t_fdf *fdf)
 	if (fdf->len_y == 500)
 		fdf->scaly = 2;
 	fdf->scalz = (fdf->scalx + fdf->scaly) / fdf->scaly * 5;
+	if (fdf->len_x == 500 && fdf->len_y == 500)
+		fdf->scalz = 0.5;
+	if (fdf->len_x == 200 && fdf->len_y == 200)
+		fdf->scalz = 1.4;
+	if (fdf->len_x == 100 && fdf->len_y == 100)
+		fdf->scalz = 1.4;
 }
 
 void		ft_add_coord(int fd2, t_fdf *fdf)
@@ -116,13 +118,19 @@ void		ft_check_and_add_coord(int fd1, int fd2, t_fdf *fdf)
 {
 	fdf->j = 0;
 	fdf->i = 0;
-	fdf->l = 60 * RAD;
-	fdf->b = -70.5 * RAD;
+	fdf->k = 5;
+	fdf->l = 37.5 * RAD;
+	fdf->b = -40.19 * RAD;
 	fdf->y = 0 * RAD;
-	printf("xyi pizda l =%f b=%f y=%f\n", fdf->l, fdf->b, fdf->y);
+	fdf->text_y = 20;
+	fdf->deltax = 0;
+	fdf->deltay = 0;
 	ft_len_plus_color_check(fd1, fdf);
 	ft_add_scale(fdf);
 	ft_add_coord(fd2, fdf);
+	add_bonus_color(fdf);
+	fdf->old_scalz = fdf->scalz;
+	fdf->old_scalall = fdf->scalall;
 	fdf->center_x = (fdf->scalx * fdf->len_x) / 2;
 	fdf->center_y = (fdf->scaly * fdf->len_y) / 4;
 }
